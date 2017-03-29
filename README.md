@@ -2,7 +2,14 @@
 Beginning of natural language processing project. 
 
 ###Goal
-Predict the accuracy of news based on keywords/phrases. Learn to extract data and get the algorithm to differentiate between object/verb in a sentence. This is NOT good right now. 
+Predict the accuracy of news based on keywords/phrases. I tried to differentiate between object/verb in a sentence. I am going to apply the Naive Bayes classifier algorithm to predict the validity of the news. 
 
-Using primarily the SpaCy python module, NLTK, and Scikit-learn and trying to reference Dataquest to help me. 
-hello! 
+Still pretty sucky. 
+
+Using primarily the SpaCy python module, NLTK, and Scikit-learn.
+
+###Resources
+https://www.dataquest.io/blog/natural-language-processing-with-python/
+https://pythonprogramming.net/naive-bayes-classifier-nltk-tutorial/?completed=/words-as-features-nltk-tutorial/
+http://textminingonline.com/dive-into-nltk-part-ii-sentence-tokenize-and-word-tokenize
+http://victoria.lviv.ua/html/fl5/NaturalLanguageProcessingWithPython.pdf
