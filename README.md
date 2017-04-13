@@ -3,12 +3,12 @@ Beginning of natural language processing project.
 
 ### Goal
 Learn natural language processing. 
-Predict the accuracy of news based on keywords/phrases. 
-One method is to differentiate between object/verb in a sentence in the title of the article. 
+Predict the accuracy of news based on keywords/tags from the article title. 
+One method is to differentiate between object/verb in a sentence in the title of the article and a summary of the article. 
 
 Still pretty sucky. 
 
-Using primarily the SpaCy python module, NLTK, and Scikit-learn.
+Triyng to learn the SpaCy python module, NLTK, and Scikit-learn.
 
 ### Resources
 https://www.dataquest.io/blog/natural-language-processing-with-python/
