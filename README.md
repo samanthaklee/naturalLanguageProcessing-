@@ -1,14 +1,14 @@
 # naturalLanguageProcessing
-Beginning of natural language processing project. 
+Journey to learning natural language processing.  
 
-### Goal
-Learn natural language processing. 
-Predict the accuracy of news based on keywords/tags from the article title. 
-One method is to differentiate between object/verb in a sentence in the title of the article and a summary of the article. 
+### Abstract
+In times of political turmoil, often the news we see from all sources is not 100% accurate. With different biases and parties releasing their own version of news, or with tabloid news outlets like Buzzfeed, Facebook, etc, we are trying to predict the accuracy of news based on text. This is a process called natural language processing, a machine learning method that essentially teaches the computer to understand words.
 
-Still pretty sucky. 
+### Method
+Fact check the accuracy of news based on keywords/phrases. 
+The third column includes the statements - predict how many could be "fact-checked." Try to break the statement into Subject-Verb-Object tuples and check against the data. 
 
-Triyng to learn the SpaCy python module, NLTK, and Scikit-learn.
+Utilizing the SpaCy python module, NLTK, and Scikit-learn.
 
 ### Resources
 https://www.dataquest.io/blog/natural-language-processing-with-python/
