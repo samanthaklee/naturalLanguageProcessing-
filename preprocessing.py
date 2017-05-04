@@ -9,12 +9,20 @@ from bs4 import BeautifulSoup
 
 class PreProcessing():
     def __init__(self, text):
-        soup = BeautifulSoup(text, "html.parser")
+        self.text = text
+        for r, map in re_map.items():
+            text['word'] = [re.sub(r, map, e) for e in text['word']]
+    #def __init__(self, text):
+        #soup = BeautifulSoup(text, "html.parser")
         #Todo Se quiser salvar os links mudar aqui
-        self.text = re.sub(r'(http://|https://|www.)[^"\' ]+', " ", soup.get_text())
+        #self.text = re.sub(r'(http://|https://|www.)[^"\' ]+', " ", soup.get_text())
         self.tokens = self.tokenizing()
 
     def lexical_diversity(self):
+        """
+        lexical density provides a measure of the proportion of lexical items 
+        (i.e. nouns, verbs, adjectives and some adverbs) in the text.
+        """
         word_count = len(self.text)
         vocab_size = len(set(self.text))
         return vocab_size / word_count
@@ -39,13 +47,15 @@ class PreProcessing():
         self.tokens = [snowball.stem(word) for word in self.tokens]
 
     def lemmatization(self):
+
+        """
+        Lemmatisation (or lemmatization) in linguistics, is the process of grouping together the different inflected 
+        forms of a word so they can be analysed as a single item.
+        """
         lemmatizer = WordNetLemmatizer()  #'portuguese'
         self.tokens = [lemmatizer.lemmatize(word, pos='v') for word in self.tokens]
 
     def part_of_speech_tagging(self):
-        raise NotImplementedError
-
-    def padronizacaoInternetes(self):
         raise NotImplementedError
 
     def untokenize(self, words):

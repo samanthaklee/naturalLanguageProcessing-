@@ -5,11 +5,11 @@ import preprocessing
 import pandas as pd
 
 def status_processing(corpus):
-    myCorpus = preprocessing.PreProcessing(#what the fuck goes here, corpus)
+    myCorpus = preprocessing.PreProcessing(corpus)
     myCorpus.text = str(corpus)
 
     print ("Doing the Initial Process...")
-    myCorpus.initial_processing()
+    #myCorpus.initial_processing()
     print ("Done.")
     print ("----------------------------")
 
