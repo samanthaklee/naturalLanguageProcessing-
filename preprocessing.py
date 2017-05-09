@@ -3,16 +3,13 @@ import io
 import re
 from nltk.stem.snowball import SnowballStemmer
 from nltk.stem import WordNetLemmatizer
-from bs4 import BeautifulSoup
+#from bs4 import BeautifulSoup
 #import spellcorrect
 
 
 class PreProcessing():
     def __init__(self, text):
         self.text = text
-        for r, map in re_map.items():
-            text['word'] = [re.sub(r, map, e) for e in text['word']]
-    #def __init__(self, text):
         #soup = BeautifulSoup(text, "html.parser")
         #Todo Se quiser salvar os links mudar aqui
         #self.text = re.sub(r'(http://|https://|www.)[^"\' ]+', " ", soup.get_text())
@@ -30,6 +27,7 @@ class PreProcessing():
     def tokenizing(self, use_default_tokenizer=True):
         if use_default_tokenizer:
             return nltk.tokenize.word_tokenize(self.text)
+       # words = word_tokenize(self.text)
         stok = nltk.data.load('tokenizers/punkt/portuguese.pickle')
         return stok.tokenize(self.text)
 
@@ -43,6 +41,11 @@ class PreProcessing():
         self.tokens = [word for word in self.tokens if word not in stopwords]
 
     def stemming(self):
+        """
+        stemming is the process of reducing inflected (or sometimes derived) words to their word stem, base or root 
+        form generally a written word form.
+        """
+
         snowball = SnowballStemmer('portuguese')
         self.tokens = [snowball.stem(word) for word in self.tokens]
 
