@@ -1,4 +1,4 @@
-#!/Users/samanthalee/Desktop/naturalLanguageProcessing/venv/bin/python
+#!/Users/samanthalee/Desktop/naturalLanguageProcessing/venv/bin/python3.4
 # See http://cens.ioc.ee/projects/f2py2e/
 from __future__ import division, print_function
 
