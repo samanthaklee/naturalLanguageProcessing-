@@ -21,6 +21,7 @@ def status_processing(corpus):
     print ("Lemmatization...")
     myCorpus.lemmatization()
 
+    return (myCorpus.stopwords())
     #print ("Correcting the words...")
     #myCorpus.spell_correct()
     #print ("Done")

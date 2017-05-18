@@ -39,6 +39,7 @@ class PreProcessing():
             'foder', 'viado', 'cacete'])
 
         self.tokens = [word for word in self.tokens if word not in stopwords]
+        return(self.tokens)
 
     def stemming(self):
         """
@@ -48,6 +49,7 @@ class PreProcessing():
 
         snowball = SnowballStemmer('portuguese')
         self.tokens = [snowball.stem(word) for word in self.tokens]
+        return(self.tokens)
 
     def lemmatization(self):
 
@@ -57,7 +59,8 @@ class PreProcessing():
         """
         lemmatizer = WordNetLemmatizer()  #'portuguese'
         self.tokens = [lemmatizer.lemmatize(word, pos='v') for word in self.tokens]
-
+        return (self.tokens)
+        
     def part_of_speech_tagging(self):
         raise NotImplementedError
 
