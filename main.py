@@ -55,6 +55,7 @@ if __name__ == '__main__':
     word_final = status_processing(summary)
     print ("End of the Pre-Processing Process")
     print (word_final)
+    
 with open('output.csv', 'w') as csvFile:
     fieldnames  = ['Words', 'Token']
     writer = csv.DictWriter(csvFile, fieldnames = fieldnames)
