@@ -14,6 +14,7 @@ class PreProcessing():
         #Todo Se quiser salvar os links mudar aqui
         #self.text = re.sub(r'(http://|https://|www.)[^"\' ]+', " ", soup.get_text())
         self.tokens = self.tokenizing()
+        #return (self.tokens)
 
     def lexical_diversity(self):
         """
@@ -39,6 +40,7 @@ class PreProcessing():
             'foder', 'viado', 'cacete'])
 
         self.tokens = [word for word in self.tokens if word not in stopwords]
+        return (self.tokens)
 
     def stemming(self):
         """
@@ -48,6 +50,7 @@ class PreProcessing():
 
         snowball = SnowballStemmer('portuguese')
         self.tokens = [snowball.stem(word) for word in self.tokens]
+        return (self.tokens)
 
     def lemmatization(self):
 
@@ -57,6 +60,16 @@ class PreProcessing():
         """
         lemmatizer = WordNetLemmatizer()  #'portuguese'
         self.tokens = [lemmatizer.lemmatize(word, pos='v') for word in self.tokens]
+        return (self.tokens)
+
+    def pos_tag(self):
+        """
+        Use NLTK's currently recommended part of speech tagger to
+        tag the given list of tokens.
+        """
+
+        self.tokens = nltk.pos_tag(self.tokens)
+        return (self.tokens)
 
     def part_of_speech_tagging(self):
         raise NotImplementedError
