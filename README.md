@@ -13,15 +13,12 @@ One method is to differentiate between object/verb in a sentence in the title of
 Fact check the accuracy of news based on keywords/phrases. 
 The third column includes the statements - predict how many could be "fact-checked." Try to break the statement into Subject-Verb-Object tuples and check against the data. 
 
-Utilizing the SpaCy python module, NLTK, and Scikit-learn.
+Utilizing NLTK, and Scikit-learn.
 
-### To Do 4/19/2017
+## PIVOTING!!!!!!!!!!
+### To Do 5/31/2017
 + Get familiar with nlp using resources below > feel free to add your own!
-+ Clean up code and explore the data
-+ Remove the punctuation and stopwords from the data 
-+ Tokenize the words and split the summaries into tuples 
-+ Remove 0 1 2 3 4 5 column 
-+ Make github branch and clone the repo to your personal computer 
++ Write to a new csv with columns: word, part of speech, original phrase, accuracy of original phrase. 
 + Algorithms to use: Naive Bayes classifier, SVM 
 
 ### Resources
